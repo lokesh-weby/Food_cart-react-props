@@ -1,0 +1,35 @@
+nav{
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top:0px;
+    z-index: 1;
+    backdrop-filter: blur(40px);
+    box-shadow: 2px 2px 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+h2{
+    font-size: 1.2rem;
+    color: black;
+}
+i{
+    color: black;
+    font-size: 1.8rem;
+    cursor: pointer;
+    top: 5px;
+    position: absolute;
+}
+.count{
+    color: white;
+    position: relative;
+    left: 25px;
+    bottom: 12px;
+}
+.count p{
+    font-size:large;
+}
+a{
+    text-decoration: none;
+}

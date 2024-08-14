@@ -1,0 +1,79 @@
+:root {
+  --primary: black;
+  --font-color: black;
+}
+body {
+  background-color:  burlywood;
+  background-attachment: fixed;
+  font-family: cursive;
+  overflow-x: hidden;
+}
+h3 {
+  color: var(--font-color);
+}
+p {
+  color: var(--primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.wrapper {
+  height: 400px;
+  background-color:blanchedalmond;
+  margin: 30px 0px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.373);
+  transition: 50ms linear;
+  border-radius: 20px;
+  &:hover {
+    box-shadow: 5px 5px 10px black;
+  }
+}
+.added {
+  color: white;
+  font-size: 1.2rem;
+  background-color: orange;
+  padding: 7px 8px;
+  border-radius: 5px;
+}
+footer{
+  text-align: center;
+  margin: 30px 0px;
+}
+footer {
+  font-size: 1.8rem;
+  color: rgb(253, 253, 253);
+}
+.img {
+  height: 60%;
+  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 400ms;
+}
+.wrapper:hover img {
+  scale: 1.1;
+}
+.details {
+  text-align: center;
+}
+
+.villan:hover {
+  animation: ro 2s infinite ease-out;
+}
+@keyframes ro {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
