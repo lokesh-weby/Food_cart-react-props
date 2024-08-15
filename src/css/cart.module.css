@@ -89,6 +89,47 @@ h1{
 .highlighted span{
   font-size: 1.6rem;
 }
+
+.billingSection{
+  display: none;
+}
+@media print {
+    .items{
+      display: none;
+    }
+    .headings{
+      border: 2px dotted black;
+    }
+    h1{
+      display: none;
+    }
+  
+    nav{
+      display: none;
+    }
+    button{
+      display: none;
+    }
+    .billingSection{
+      display: flex;
+      flex-direction: column;
+      border: 4px dotted black;
+      padding: 0px 20px;
+    }
+    .billingSection p{
+      font-size: 1rem;
+      text-align: center;
+      margin: unset;
+    }
+    .billingSection div{
+      border-bottom: 1px solid rgba(128, 128, 128, 0.101);
+    }
+    .billingSection p:nth-child(1){
+      text-align: left;
+    }
+   
+}
+/* to this */
 @media(max-width:900px){
     .img{
         height: 80px;
