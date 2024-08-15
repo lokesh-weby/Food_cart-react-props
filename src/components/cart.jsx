@@ -71,7 +71,38 @@ const Viewcart = ({
             </div>
           ))
         )}
-        {length < 1 ? <h1>{}</h1> : <h1 className="sum">Total: ₹{tot}/-</h1>}
+            <button onClick={()=>{window.print()}}>pay your bill</button><h1 className="sum">Total: ₹{tot}/-</h1>
+        
+        { 
+        length < 1 ? <h1>{}</h1> :
+            // billing section
+            <div className={cartmodule.billingSection}>  
+            <p className="text-center my-3">WEB'S KITCHEN</p>  
+            <p className="text-center">kannamangalam</p>
+            <p className="text-center">+91 9876543210</p>
+          <p className="row" >
+           <h3 className="col-4">Items</h3>
+           <h3 className="col-4">Qty</h3>
+           <h3 className="col-4">Rate</h3>
+           </p>
+      { 
+      cart.map((bills) => (
+          (bills.quantity!==0 && !isNaN(bills.quantity))?
+           <h4 key={bills.id}>
+            <div className="row">
+             <p className="col-4">{bills.name}</p>
+             <p className="col-4">{bills.quantity}</p>
+             <p className="col-4">{bills.rate*bills.quantity}</p>
+            </div>
+           </h4>
+           :<h1></h1>
+       
+          ))}
+          <div className="row mx-4">
+            <p className="col-12 text-end">Total ₹{tot}/-</p>
+          </div>
+          </div>
+           }
       </main>
     </>
   );
