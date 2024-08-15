@@ -40,9 +40,9 @@ const Home = ({cart,setcart,setLength,length}) => {
                 <h3>{item.name}</h3>
                 <p>Price ₹{item.rate}/-</p>
                 {(cart).includes(item)?
-                <Link to={"/cart"} className='added'>Order placed</Link>:
+                <Link to={"/cart"} className='added'>place order</Link>:
                  <button className="btn btn-primary" onClick={()=>AddItem(item)}>
-                  Place Order
+                  Add to cart
                 </button>}
                
               </div>
