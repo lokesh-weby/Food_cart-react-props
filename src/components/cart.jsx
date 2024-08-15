@@ -73,7 +73,7 @@ const Viewcart = ({
           ))
         )}
          {(length<1 || tot===0)?<p></p>: <div className="d-flex justify-content-between my-5">
-          <button className="btn btn-primary" onClick={()=>{window.print()}}>pay your bill</button>
+          <button className={cartmodule.button+" btn btn-primary"} onClick={()=>{window.print()}}>pay your bill</button>
           <h1 className="sum">Total: ₹{tot}/-</h1>
           </div>}
         
