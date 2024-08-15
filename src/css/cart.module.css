@@ -107,7 +107,7 @@ h1{
     nav{
       display: none;
     }
-    button{
+    .button{
       display: none;
     }
     .billingSection{
