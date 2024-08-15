@@ -95,7 +95,7 @@ const Viewcart = ({
            <h4 key={bills.id}>
             <div className="row">
              <p className="col-4">{bills.name}</p>
-             <p className="col-4">{bills.quantity}</p>
+             <p className="col-4">{bills.rate+"x"+bills.quantity}</p>
              <p className="col-4">{bills.rate*bills.quantity}</p>
             </div>
            </h4>
