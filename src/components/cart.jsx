@@ -54,6 +54,7 @@ const Viewcart = ({
                   }
                   type="number"
                   min="0"
+                  max="40"
                   defaultValue="1"
                    />
                 </div>
