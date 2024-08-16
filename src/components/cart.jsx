@@ -9,9 +9,7 @@ const Viewcart = ({
   setcart,
   setLength,
   tot,
-  setTot,
-  qty,
-  setQty,
+  setTot
 }) => {
   //removing the matching element by filtering method
   const remove = (id) => {
@@ -39,7 +37,6 @@ const Viewcart = ({
     );
   }
   function increment(id, originalquantity) {
-    setQty(qty + 1);
     setcart((cart) =>
       cart.map((itm) =>
         id === itm.id ? { ...itm, quantity: originalquantity + 1 } : itm
