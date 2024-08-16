@@ -8,25 +8,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .items {
   padding: 10px 0px;
   display: flex;
   justify-content: space-around;
-  
   align-items: center;
-  box-shadow: inset(10px 10px 10px black);
   background-color:antiquewhite;
-  border: 1px solid rgb(191, 190, 190);
+  border: 2px solid rgba(191, 190, 190, 0.221);
   margin: 10px 0px;
-  transition: all 200ms;
-  &:hover {
-    cursor: pointer;
-    scale: 1.01;
-    box-shadow: 2px 2px 10px gray;
-  }
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -79,7 +70,7 @@ h1{
 
 }
 .highlighted{
-  height: 100px;
+
   display: flex;
   flex-direction: column;
 
@@ -89,25 +80,35 @@ h1{
 .highlighted span{
   font-size: 1.6rem;
 }
-
+/* add this  */
 .billingSection{
   display: none;
 }
+/* new */
+ .controlbtn{
+  border-radius: unset;
+  outline: none;
+  font-weight: bold;
+  border: 1px solid rgba(128, 128, 128, 0.105);
+  &:hover{
+    background-color: black;
+    color: white;
+   
+  }
+}
+.PlusMinusContainer{
+  width: 100px;
+  height: 40px;
+  background-color: white;
+  justify-content: space-between;
+  display: flex;
+}
+/* . */
 @media print {
-    .items{
-      display: none;
-    }
     .headings{
       border: 2px dotted black;
     }
-    h1{
-      display: none;
-    }
-  
-    nav{
-      display: none;
-    }
-    .button{
+    nav,h1,.items,.button{
       display: none;
     }
     .billingSection{
