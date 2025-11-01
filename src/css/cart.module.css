@@ -9,7 +9,9 @@
   flex-direction: column;
   align-items: center;
 }
-
+#gpayqr{
+  display:  none ;
+}
 .items {
   padding: 10px 0px;
   display: flex;
@@ -105,6 +107,9 @@ h1{
 }
 /* . */
 @media print {
+  #gpayqr{
+    display: block;
+  }
     .headings{
       border: 2px dotted black;
     }

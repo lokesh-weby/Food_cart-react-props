@@ -2,6 +2,7 @@
 import React from "react";
 import cartmodule from "../css/cart.module.css";
 import { Link } from "react-router-dom";
+import GPayQR from "./GPayQR";
 
 const Viewcart = ({
   cart,
@@ -106,7 +107,7 @@ const Viewcart = ({
         {length < 1 && tot === 0 ? (
           <p></p>
         ) : (
-          <div className="d-flex justify-content-between align-items-center">
+          <div className="d-flex justify-content-between align-items-center flex-wrap ">
             <button
               className={cartmodule.button + " btn btn-primary"}
               onClick={() => {
@@ -116,13 +117,14 @@ const Viewcart = ({
               pay your bill
             </button>
             <h1 className="sum">Total: ₹{tot}/-</h1>
+           
           </div>
         )}
 
         {length < 1 ? (
           <h1>{}</h1>
-        ) : (
-          // billing section
+        ) : (<>
+        
           <div className={cartmodule.billingSection}>
             <p className="text-center my-3">WEB'S KITCHEN</p>
             <p className="text-center">kannamangalam</p>
@@ -141,6 +143,7 @@ const Viewcart = ({
                     <p className="col-4">{bills.rate * bills.quantity}</p>
                   </div>
                 </h4>
+                 
               ) : (
                 <p></p>
               )
@@ -148,7 +151,10 @@ const Viewcart = ({
             <div className="row mx-4">
               <p className="col-12 text-end">Total ₹{tot}/-</p>
             </div>
+          <GPayQR amount={tot}/>
           </div>
+        
+        </>
         )}
       </main>
     </>
