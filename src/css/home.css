@@ -4,6 +4,7 @@ body {
   background-color:  burlywood;
   background-attachment: fixed;
   overflow-x: hidden;
+  user-select: none;
 }
 h3 {
   color: var(--font-color);
